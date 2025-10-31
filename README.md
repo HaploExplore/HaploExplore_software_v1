@@ -95,13 +95,21 @@ HaploExplore includes several default parameters that can be modified through th
 . LD Thresholds:
 	r²: 0.1 (default)
 	D': 0.7 (default)
+	
 . Carrier Percentage (CP): 80% (default)
+
 . MAF percentage cut: 0.8 (default)
+
 . Maximum SNP Gap Within a Block: 200 SNPs (default)
+
 . Maximum Haploblock Size: 5,000,000 base pairs (default)
+
 . Region Size for Splitting Datasets: 10,000,000 base pairs (default)
+
 . Minimum MAF Threshold to Include a SNP: 1%(default) - when loading the VCF file
+
 . Extend mode : 0.9 (default) - extend haploblocks (without region and size limits) when its size reach x% (per default 90%) of Maximum Haploblock Size
+
 . Pruning mode : 0.95 (default) - delete haploblocks that have at least x% (per default 95%) of its SNPs that are contained in another haploblocks (of the same size or bigger)
 
 
