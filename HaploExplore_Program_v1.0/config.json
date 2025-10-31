@@ -1,0 +1,10 @@
+{
+  "r_square_cut": [0.1],
+  "d_prime_cut": [0.7],
+  "maf_percentage_cut": [0.8],
+  "carriere_percentage_cut": [80],
+  "MAX_EMPTY_SNP_GAP_BETWEEN_TWO_SNPS_IN_A_BLOC":[200],
+  "MAX_BP_SIZE_FOR_HAPLOBLOC":[1000000],
+  "REGION_SIZE":[10000000],
+  "maf_threshold":[0.01]
+}
