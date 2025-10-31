@@ -108,7 +108,7 @@ HaploExplore includes several default parameters that can be modified through th
 
 . Minimum MAF Threshold to Include a SNP: 1%(default) - when loading the VCF file
 
-. Extend mode : 0.9 (default) - extend haploblocks (without region and size limits) when its size reach x% (per default 90%) of Maximum Haploblock Size
+. Extend mode : 0.9 (default) - extend haploblocks (without size limits) when its size reach x% (per default 90%) of Maximum Haploblock Size
 
 . Pruning mode : 0.95 (default) - delete haploblocks that have at least x% (per default 95%) of its SNPs that are contained in another haploblocks (of the same size or bigger)
 
