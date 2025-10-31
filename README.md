@@ -1,13 +1,13 @@
-HAPLOEXPLORE
+**HAPLOEXPLORE**
 
-Motivation: Haploblocks in the genome are constitutive of evolution patterns and they play a pivotal role in shaping the genomic variability and susceptibility/resistance to diseases. Several software have been developed for haploblock detection, but they do not distinguish between the impacts of major and minor SNP alleles. In this study, we present a powerful haploblock detection software, specifically designed for identifying haploblocks associated with SNP minor allele haploblocks (MiA-haploblocks). The focus on minor alleles is essential since they represent the most recent evolutionary signatures and are closely linked to the various selection pressures experienced in recent history. 
+*Motivation*: Haploblocks in the genome are constitutive of evolution patterns and they play a pivotal role in shaping the genomic variability and susceptibility/resistance to diseases. Several software have been developed for haploblock detection, but they do not distinguish between the impacts of major and minor SNP alleles. In this study, we present a powerful haploblock detection software, specifically designed for identifying haploblocks associated with SNP minor allele haploblocks (MiA-haploblocks). The focus on minor alleles is essential since they represent the most recent evolutionary signatures and are closely linked to the various selection pressures experienced in recent history. 
 
-Results: HaploExplore operates on vcf files containing phased data, exhibiting rapid processing times (a few minutes for analyzing the whole chromosome 22) and generating user-friendly outputs. Its results are convergent for populations starting from 100 individuals, and, as expected, shorter MiA-haploblocks are observed in populations of African descent compared to those of European descent. A comparative analysis of HaploExplore against other haploblock detection software revealed its superiority in terms of either simplicity, or flexibility, or speed, with the unique capability to target minor alleles. HaploExplore will be very useful for evolutionary genomics and for GWAS analysis in human diseases, given that the effects of genetic associations may accumulate within a specific haploblocks.
+*Results*: HaploExplore operates on vcf files containing phased data, exhibiting rapid processing times (a few minutes for analyzing the whole chromosome 22) and generating user-friendly outputs. Its results are convergent for populations starting from 100 individuals, and, as expected, shorter MiA-haploblocks are observed in populations of African descent compared to those of European descent. A comparative analysis of HaploExplore against other haploblock detection software revealed its superiority in terms of either simplicity, or flexibility, or speed, with the unique capability to target minor alleles. HaploExplore will be very useful for evolutionary genomics and for GWAS analysis in human diseases, given that the effects of genetic associations may accumulate within a specific haploblocks.
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
 A Streamlit-based web application has been developed for an interactive and user-friendly experience. Users can easily upload input files, adjust parameters, and visualize results without running command-line scripts. The app is accessible via Docker or can be launched locally.
 
-Running with Docker: 
+**Running with Docker**: 
 
 Set the Volumes path :
 	- set the accessible Folders for your Docker in the file .env
@@ -50,10 +50,10 @@ ________________________________________________________________________________
 A version of HaploExplore exists without the application (program-only) and can be run directly from the terminal with the same functionalities as the application.  
 To run it, an "execution.py" file is provided to show how to use the different functions. Also to set the different parameters, a config.json file is provided.
 
-This version requires Python 3.10.12 and bcftools, which is needed for processing VCF files.
+This version requires **Python 3.10.12** and **bcftools**, which is needed for processing VCF files.
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
-Current functionalities:
+**Current functionalities**:
 
 	- Haploblock creation with LD (Find haploblocks in a region)
 		- Building modes :
@@ -71,7 +71,7 @@ Current functionalities:
 	- All parameters can be changed by the user.
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
-Input files : 
+**Input files** : 
 
 	- Find haploblocks in a region function : 
 		- A VCF file containing the region to analyze (no limit of individuals).
@@ -90,7 +90,7 @@ Input files :
 		- A SNP information file generated by "Find haploblocks in a region" function.
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
-Default Settings and Parameters:
+**Default Settings and Parameters**:
 HaploExplore includes several default parameters that can be modified through the app:
 
 . LD Thresholds:
@@ -118,7 +118,7 @@ Note: The Carrier Percentage (CP) is the proportion of individuals who carry the
 
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
-Output files :
+**Output files** :
 
 	- Find haploblocks in a region function : 
 		- Tables (.txt):
