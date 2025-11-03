@@ -45,16 +45,18 @@ Warning : If the App can't access to the provided folders : Go to 1. DockerDeskt
 								  2. Settings
 								  3. File Sharing
 								  4. Add the directory path
-
-**Run the software without vusual interface** :
-	1. Download "*Program*" folder.
-	2. Run *executable.py* file or use the functions in your own program like in the *executable.py* file.
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
 A version of HaploExplore exists without the application (program-only) and can be run directly from the terminal with the same functionalities as the application.  
 To run it, an "execution.py" file is provided to show how to use the different functions. Also to set the different parameters, a config.json file is provided.
 
 This version requires **Python 3.10.12** and **bcftools**, which is needed for processing VCF files.
+
+**Run the software without vusual interface** :
+
+	1. Download "*Program*" folder.
+	
+	2. Run *executable.py* file or use the functions in your own program like in the *executable.py* file.
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
 **Current functionalities**:
