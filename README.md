@@ -54,9 +54,9 @@ This version requires **Python 3.10.12** and **bcftools**, which is needed for p
 
 **Run the software without vusual interface** :
 
-	1. Download "*Program*" folder.
+	1. Download "Program" folder.
 	
-	2. Run *executable.py* file or use the functions in your own program like in the *executable.py* file.
+	2. Run the "executable.py" file or use the functions in your own program like in the "executable.py" file.
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
 **Current functionalities**:
