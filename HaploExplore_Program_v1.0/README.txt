@@ -52,6 +52,12 @@ A version of HaploExplore exists without the application (program-only) and can 
 To run it, an "execution.py" file is provided to show how to use the different functions. Also to set the different parameters, a config.json file is provided.
 
 This version requires Python 3.10.12 and bcftools, which is needed for processing VCF files.
+
+**Run the software without vusual interface** :
+
+	1. Download "Program" folder.
+	
+	2. Run the "executable.py" file or use the functions in your own program like in the "executable.py" file.
 ___________________________________________________________________________________________________________________
 
 Current functionalities:
