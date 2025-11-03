@@ -5,7 +5,7 @@
 *Results*: HaploExplore operates on vcf files containing phased data, exhibiting rapid processing times (a few minutes for analyzing the whole chromosome 22) and generating user-friendly outputs. Its results are convergent for populations starting from 100 individuals, and, as expected, shorter MiA-haploblocks are observed in populations of African descent compared to those of European descent. A comparative analysis of HaploExplore against other haploblock detection software revealed its superiority in terms of either simplicity, or flexibility, or speed, with the unique capability to target minor alleles. HaploExplore will be very useful for evolutionary genomics and for GWAS analysis in human diseases, given that the effects of genetic associations may accumulate within a specific haploblocks.
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
-A Streamlit-based web application has been developed for an interactive and user-friendly experience. Users can easily upload input files, adjust parameters, and visualize results without running command-line scripts. The app is accessible via Docker or can be launched locally.
+A Streamlit-based web application has been developed for an interactive and user-friendly experience. Users can easily upload input files, adjust parameters, and visualize results without running command-line scripts. The app is accessible via Docker or can be launched locally (via App folder).
 
 **Running with Docker**: 
 
@@ -25,7 +25,7 @@ Run the docker image via Docker desktop
 To run easily the application we recommend building it on Visual studio and using Docker Desktop.
 
 
-Running without Docker (requires bcftools): 
+**Running without Docker (requires bcftools)**: 
 
 To run HaploExplore only with Streamlit, ensure you have Python 3.10.12 installed along with bcftools, which is required for processing VCF files. 
 To use the graphical interface of HaploExplore, install the required dependencies and launch the Streamlit app:
@@ -45,6 +45,10 @@ Warning : If the App can't access to the provided folders : Go to 1. DockerDeskt
 								  2. Settings
 								  3. File Sharing
 								  4. Add the directory path
+
+**Run the software without vusual interface** :
+	1. Download "*Program*" folder.
+	2. Run *executable.py* file or use the functions in your own program like in the *executable.py* file.
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
 A version of HaploExplore exists without the application (program-only) and can be run directly from the terminal with the same functionalities as the application.  
