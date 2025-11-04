@@ -1,9 +1,26 @@
-**HAPLOEXPLORE**
+**HAPLOEXPLORE PRESENTATION AND USE**
 
-*Motivation*: Haplotype blocks in the genome are informative of evolutionary processes and they play a pivotal role in describing the genomic variability across human populations and susceptibility/resistance to diseases. Several software have been developed for haplotype blocks detection, but they do not distinguish between the impacts of major and minor SNP alleles. Here, we present a powerful haploblock detection software, specifically designed for identifying haploblocks associated with SNP minor allele haploblocks (MiA-haploblocks). These haploblocks are particularly important as they can significantly influence phenotypic traits, offering a novel approach for studying genetic associations and complex traits.
+**SHORT DESCRIPTION.**
 
-*Results*: HaploExplore operates on VCF files containing phased data, exhibiting rapid processing times and generating user-friendly outputs. Its results are convergent for populations starting from 100 individuals. A comparative analysis of HaploExplore against other haploblock detection software revealed its superiority in terms of either simplicity, or flexibility, or speed, with the unique capability to target minor alleles. HaploExplore will be very useful for evolutionary genomics and for GWAS analysis in human diseases, given that the effects of genetic associations may accumulate within a specific haploblock.
-__________________________________________________________________________________________________________________________________________________________________________________________________
+Haplotype blocks (haploblocks) in the genome are informative of evolutionary processes and are instrumental in describing the genomic variability across human populations and susceptibility/resistance to diseases. Several software have been developed for haplotype blocks detection, but they do not distinguish between the impacts of major and minor SNP alleles. Here, we present HaploExplore, a haploblock detection software specifically designed to identify haploblocks associated with SNP minor alleles (MiA-haploblocks). MiA-haploblocks are particularly important as they can significantly influence phenotypic traits, offering a novel approach for studying genetic associations and complex traits.
+
+HaploExplore operates on VCF files containing phased data, exhibiting rapid processing times and generating user-friendly outputs. Its results are convergent for populations starting from 100 individuals. A comparative analysis of HaploExplore against other haploblock detection software revealed its superiority in terms of either simplicity, or flexibility, or speed, with the unique capability to target minor alleles. These features make HaploExplore applicable to evolutionary genomics studies and to GWAS contexts where association effects may accumulate within specific haploblocks.
+
+HaploExplore provides multiple modes and configurable parameters to define haploblocks within a genomic region (whole chromosome or a specified interval) for a given population. For example:
+- Exhaustive mode: haploblocks are defined for each SNP present in the region.
+- List mode: haploblocks are defined only for a user-provided list of SNPs. 
+
+Key parameters determining whether a tested SNP is included in a haploblock defined from a core SNP include:
+- Minimal MAF: minimum minor allele frequency for SNPs considered in the region.
+- D′ threshold: minimum D′ between the tested SNP and the core SNP required for inclusion.
+- r2 threshold: minimum r2 between the tested SNP and the core SNP required for inclusion.
+- CP (carrier percentage): the minimum percentage of individuals carrying the core SNP minor allele who must also carry the tested SNP minor allele for that SNP to be included in the haploblock.
+
+Many more information, methodological details, usage examples, modes, parameters, and output descriptions are provided in Manetti et al. (NAR Genomics and Bioinformatics, 2025). We recommend to carefully read this publication and the supplementary material examples to optimize the use of the software.
+
+
+
+**INSTALLATION RECOMMENDATIONS.**
 
 A Streamlit-based web application has been developed for an interactive and user-friendly experience. Users can easily upload input files, adjust parameters, and visualize results without running command-line scripts. The app is accessible via Docker or can be launched locally (via App folder).
 
@@ -52,18 +69,24 @@ To run it, an "execution.py" file is provided to show how to use the different f
 
 This version requires **Python 3.10.12** and **bcftools**, which is needed for processing VCF files.
 
-**Run the software without vusual interface** :
+**Run the software without visual interface** :
 
 	1. Download "Program" folder.
 	
 	2. Run the "executable.py" file or use the functions in your own program like in the "executable.py" file.
+
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
-**Current functionalities**:
+**AVAILABILITY**
+
+Both the app and software are available on Windows, MacOS and Linux.
+__________________________________________________________________________________________________________________________________________________________________________________________________
+
+**CURRENT FUNCTIONALITIES**
 
 	- Haploblock creation with LD (Find haploblocks in a region)
 		- Building modes :
-			- Standard mode : if a haploblock cannot be added to any haplobloc then a new one is generated.
+			- Standard mode : if a haploblock cannot be added to any haploblock then a new one is generated.
 			- Exhaustive mode : build a haploblock for each SNPs.
 			- ListSNP mode : build a haploblock for SNPs of the provided list only. (possibility to integrate the SNPs of the list in haploblocks or not (useful for the study of genes for example) and also to generate haploblocks for other SNPs that are not in the list. (in addition of the SNPs of the list) such as the standard mode)
 		- Removal of SNPs with a MAF <  0.01 (this parameter can by changed)
@@ -77,7 +100,7 @@ ________________________________________________________________________________
 	- All parameters can be changed by the user.
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
-**Input files** : 
+**INPUT FILES**
 
 	- Find haploblocks in a region function : 
 		- A VCF file containing the region to analyze (no limit of individuals).
@@ -88,7 +111,7 @@ ________________________________________________________________________________
 		- A composition file generated by "Find haploblocks in a region" function.
 
 	- List SNPs Carrying Given SNPs function :
-    		- VCF file. (phased/ & compressed/not compressed)
+    		- VCF file. (phased & compressed/not compressed)
     		- List of SNP IDs. (Chromosome:Position:Position:RefAllele:AltAllele format)
 
 	- Plot Haploblocks function :
@@ -96,7 +119,8 @@ ________________________________________________________________________________
 		- A SNP information file generated by "Find haploblocks in a region" function.
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
-**Default Settings and Parameters**:
+**DEFAULT SETTINGS AND PARAMETERS**
+
 HaploExplore includes several default parameters that can be modified through the app:
 
 . LD Thresholds:
@@ -120,11 +144,11 @@ HaploExplore includes several default parameters that can be modified through th
 . Pruning mode : 0.95 (default) - delete haploblocks that have at least x% (per default 95%) of its SNPs that are contained in another haploblocks (of the same size or bigger)
 
 
-Note: The Carrier Percentage (CP) is the proportion of individuals who carry the minor allele of a tag SNP and also carry the minor alleles of other SNPs within the same haploblock. This ensures that only SNPs with strong biological relevance and statistical correlation are grouped together.
+Note: The Carrier Percentage (CP) is the proportion of individuals who carry the minor allele of a coreSNP and also carry the minor alleles of other SNPs within the same haploblock. This ensures that only SNPs with strong biological relevance and statistical correlation are grouped together.
 
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
-**Output files** :
+**OUTPUT FILES**
 
 	- Find haploblocks in a region function : 
 		- Tables (.txt):
@@ -147,3 +171,15 @@ ________________________________________________________________________________
 
 
 The software is built with Python 3.10.12 and utilizes Streamlit for an interactive graphical interface.
+
+__________________________________________________________________________________________________________________________________________________________________________________________________
+**CITATION**
+
+If you use **HaploExplore** in your research, please cite the following publication :
+
+Manetti M, Hiet S, et al. HaploExplore: a software specifically designed for the detection of minor allele (MiA-) Haploblocks*, NAR Genomics and Bioinformatics, 2025.  DOI: 
+
+
+**LICENSE**
+
+HaploExplore is distributed under the MIT License.  
